@@ -42,7 +42,7 @@ ___粗斜体___
 
 [点击这里进入百度](https://www.baidu.com/)
 
-![图片1](C:\Users\Administrator\Desktop\1234567.png)
+![图片1](https://github.com/HandsomeBoy2/test/blob/master/1234567.png)
 
 
 
