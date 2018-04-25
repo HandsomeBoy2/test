@@ -28,6 +28,7 @@ public class MyFrame extends Frame {
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 			}
+			
 		});
 	}
 

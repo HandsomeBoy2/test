@@ -22,7 +22,7 @@ public class Bullet extends GameObject{
 	
 	public void draw(Graphics g) {
 		Color c = g.getColor();
-		g.setColor(Color.red);
+		g.setColor(Color.GREEN);
 		g.fillOval((int)x, (int)y, width, height);
 		
 		x += speed*Math.cos(degree);

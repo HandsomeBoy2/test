@@ -6,7 +6,7 @@ import java.awt.Rectangle;
 public class GameObject {
 	Image img;
 	double x, y;
-	int speed = 3;
+	int speed = 2;
 	
 	int width, height;
 	
