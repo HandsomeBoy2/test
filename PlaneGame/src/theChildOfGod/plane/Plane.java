@@ -20,7 +20,7 @@ public class Plane extends GameObject {
 
 	public void draw(Graphics g) {
 		if (live) {
-			g.drawImage(img, (int) x, (int) y, 20, 20, null);
+			g.drawImage(img, (int) x, (int) y, 30, 30, null);
 			move();
 		}
 	}

@@ -14,7 +14,7 @@ import theChildOfGod.util.GameUtil;
 import theChildOfGod.util.MyFrame;
 
 public class PlaneGameFrame extends MyFrame{
-	Image background2 = GameUtil.getImage("images/background2.jpg");
+	Image background3 = GameUtil.getImage("images/background3.jpg");
 	Plane p = new Plane("images/plane.jpg", 50, 50);
 	
 	ArrayList bulletList = new ArrayList(); //·ºÐÍÎ´¼Ó
@@ -23,11 +23,11 @@ public class PlaneGameFrame extends MyFrame{
 	Date middleTime;
 	Date endTime;
 	
+	Explode bao;
+	
 	public void paint(Graphics g) {
-		g.drawImage(background2, 0, 0, Constant.GAME_WIDTH, Constant.GAME_HEIGHT, null);
+		g.drawImage(background3, 0, 0, Constant.GAME_WIDTH, Constant.GAME_HEIGHT, null);
 		p.draw(g);
-		p.move();
-		
 		for(int i = 0; i < bulletList.size(); i++) {
 			Bullet b = (Bullet) bulletList.get(i);
 			b.draw(g);
@@ -36,7 +36,12 @@ public class PlaneGameFrame extends MyFrame{
 			boolean peng = b.getRect().intersects(p.getRect());
 			if (peng) {
 				p.setLive(false);//·É»úËÀµô
-				endTime = new Date();
+				if (bao == null) {
+					bao = new Explode(p.x, p.y);
+					endTime = new Date();
+				}
+				bao.draw(g);
+				break;
 			} else {
 				middleTime = new Date();
 			}
