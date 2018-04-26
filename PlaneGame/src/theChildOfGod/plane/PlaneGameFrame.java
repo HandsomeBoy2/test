@@ -14,7 +14,7 @@ import theChildOfGod.util.GameUtil;
 import theChildOfGod.util.MyFrame;
 
 public class PlaneGameFrame extends MyFrame{
-	Image background = GameUtil.getImage("images/background.jpg");
+	Image background2 = GameUtil.getImage("images/background2.jpg");
 	Plane p = new Plane("images/plane.jpg", 50, 50);
 	
 	ArrayList bulletList = new ArrayList(); //·ºÐÍÎ´¼Ó
@@ -24,7 +24,7 @@ public class PlaneGameFrame extends MyFrame{
 	Date endTime;
 	
 	public void paint(Graphics g) {
-		g.drawImage(background, 0, 0, Constant.GAME_WIDTH, Constant.GAME_HEIGHT, null);
+		g.drawImage(background2, 0, 0, Constant.GAME_WIDTH, Constant.GAME_HEIGHT, null);
 		p.draw(g);
 		p.move();
 		
